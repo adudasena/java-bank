@@ -12,6 +12,14 @@ public class Conta {
 
     //construtor
     public Conta(String titular) {
-        
+        this.titular = titular;
+
+        //quando criar uma conta, aumenta o total de contas
+        totalContas++;
+
+        //numero da conta é o valor atual do contador
+        this.numero= totalContas;
+
+        System.out.println("Conta criada! Número: " + this.numero);
     }
 }
