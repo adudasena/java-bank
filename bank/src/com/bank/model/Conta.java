@@ -8,7 +8,7 @@ public class Conta {
     private double saldo;
 
     //Atributo estático. Pertence à classe, não a cada conta
-    private static int totalContas= 0;
+    private static int totalContas = 0;
 
     //construtor
     public Conta(String titular) {
@@ -18,7 +18,7 @@ public class Conta {
         totalContas++;
 
         //numero da conta é o valor atual do contador
-        this.numero= totalContas;
+        this.numero = totalContas;
 
         System.out.println("Conta criada! Número: " + this.numero);
     }
@@ -32,13 +32,27 @@ public class Conta {
         }
     }
 
-        public void sacar(double valor) {
-            if (saldo > valor) {
-                this.saldo -= valor;
-                System.out.println("Valor retirado. O saldo restante é " + saldo);
-            } else {
-                System.out.println("Saldo insuficiente. O máximo disponível é " + saldo);
-            }
+    public void sacar(double valor) {
+        if (saldo > valor) {
+            this.saldo -= valor;
+            System.out.println("Valor retirado. O saldo restante é " + saldo);
+        } else {
+            System.out.println("Saldo insuficiente. O máximo disponível é " + saldo);
+        }
     }
+
+    //getters
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    //estático para ter acesso ao número total de contas
+    public static int getTotalContas() {
+        return totalContas;
+       }
     }
 
