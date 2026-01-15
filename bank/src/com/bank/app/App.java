@@ -1,5 +1,8 @@
 package com.bank.app;
 import com.bank.model.Conta;
+import com.bank.model.ContaCorrente;
+import com.bank.model.ContaPoupanca;
+
 import java.util.Scanner;
 
 public class App {
@@ -21,12 +24,17 @@ public class App {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Digite o nome do titular da conta: ");
-                    sc.nextLine(); // Limpa o buffer do teclado
-                    String nome = sc.nextLine();
+                    System.out.println("Qual o tipo de conta? 1- Corrente | 2- Poupança: ");
+                    int tipoConta = sc.nextInt();
+                    System.out.println("Qual o nome do titular? Digite: ");
+                    sc.nextLine();
+                    String nome= sc.nextLine();
 
-                    //usando o construtor
-                    contaAtual = new Conta("Duda");
+                    if (tipoConta ==1) {
+                        contaAtual= new ContaCorrente(nome);
+                    } else {
+                        contaAtual= new ContaPoupanca(nome);
+                    }
                     break;
 
                 case 2:

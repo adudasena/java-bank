@@ -1,6 +1,6 @@
 package com.bank.model;
 
-public class Conta {
+public abstract class Conta {
 
     //atributos privados
     private int numero;
@@ -9,6 +9,9 @@ public class Conta {
 
     //Atributo estático. Pertence à classe, não a cada conta
     private static int totalContas = 0;
+
+    //método abstrato que será implementado nas contas filhas
+    public abstract void imprimirTipoConta();
 
     //construtor
     public Conta(String titular) {
