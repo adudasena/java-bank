@@ -41,6 +41,11 @@ public class Conta {
         }
     }
 
+    public void aplicarTaxaMensal() {
+        this.saldo= saldo - 12;
+        System.out.println("Foi descontado 12 reais em taxa. O saldo atual agora é: " + saldo);
+    }
+
     //getters
     public double getSaldo() {
         return saldo;
