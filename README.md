@@ -10,7 +10,7 @@ Este repositório contém a implementação de um sistema bancário robusto, des
 - **Polimorfismo**: Sobrescrita de métodos e uso de referências genéricas para diferentes tipos de contas.
 - **Encapsulamento**: Atributos privados com getters e setters para proteção de dados.
 
-### 2. Interfaces e Regras de Negócio
+### Interfaces e Regras de Negócio
 - **Interface `Tributavel`**: Implementação de taxas e tributos específicos para produtos bancários.
 - **Operações**: Métodos de depósito, saque com validação e menu interativo via console.
 
